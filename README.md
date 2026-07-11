@@ -1,58 +1,20 @@
-\# 🛍️ Styra - E-Commerce Backend
+\# Styra - E-Commerce Website Backend
 
 
 
-\## 📌 Project Overview
+\## About The Project
 
 
 
-Styra is a full-stack e-commerce web application developed using the MERN stack. This repository contains the backend implementation of the application, responsible for handling APIs, database operations, user authentication, product management, cart functionality, and payment integration.
+Styra is a full-stack e-commerce website developed as an MCA final year project.
 
 
 
-The backend is built using Node.js and Express.js, with MongoDB as the database for storing application data.
+This repository contains the backend part of the application. The backend handles APIs, database operations, user authentication, products, cart management, and payment integration.
 
 
 
-\---
-
-
-
-\## 🚀 Features
-
-
-
-\- User Registration and Login API
-
-\- Product Management APIs
-
-\- Product Fetching and Filtering
-
-\- Cart Management
-
-\- Wishlist Management
-
-\- Order Processing
-
-\- Payment Gateway Integration
-
-\- Secure API Routing
-
-\- MongoDB Database Integration
-
-\- RESTful API Architecture
-
-
-
-\---
-
-
-
-\## 🛠️ Tech Stack
-
-
-
-\### Backend Technologies
+\## Technologies Used
 
 
 
@@ -64,27 +26,31 @@ The backend is built using Node.js and Express.js, with MongoDB as the database 
 
 \- Mongoose
 
-
-
-\### Tools Used
-
-
-
-\- VS Code / Cursor
-
-\- Git \& GitHub
-
-\- Postman
-
-\- Razorpay API
+\- JavaScript
 
 
 
-\---
+\## Features
 
 
 
-\## 📂 Backend Project Structure
+\- User Registration and Login
+
+\- Product APIs
+
+\- Product Details API
+
+\- Cart Management
+
+\- Wishlist Management
+
+\- Payment Integration using Razorpay
+
+\- MongoDB Database Connection
+
+
+
+\## Project Structure
 
 
 
