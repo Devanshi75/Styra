@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details — Styra</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+  <!--NavBar-->
+  <nav class="header">
+    <div class="nav-left">
+     <a href="index.html"><img src="" alt="" class="logo"></a> 
+    </div>
+    <section class="nav-center">
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">COntact</a></li>
+      </ul>
+    </section>
+    <section class="searchbox">
+     <div>
+      <ul class="action">
+        <li class="search-wrapper">
+          <input type="text" id="search-input" placeholder="Search products">
+          <button id="search-btn">
+             <i class="fa-solid fa-magnifying-glass"></i></button></li>
+        <li class="profile-icon"><a href="login.html"></a> <i class="fa-regular fa-user"></i></a>
+        </li>
+        <li class="wishlist-icon"><a href="wishlist.html"> <i class="fa-regular fa-heart"></i></a></li>
+       <li class="bag-icon">
+  <a href="cart.html">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span id="cart-count">0</span>
+  </a>
+</li>
+      </ul>
+</div>
+    </section>
+  </nav>
+
+  <!-- CHANGE: Wrapped product details in a page container for better spacing & responsive layout -->
+  <main class="product-detail-page">
+
+   <section id="prod-details">
+    <!-- CHANGE: Image column — main image + thumbnail gallery (existing IDs preserved) -->
+    <div class="pro-img">
+      <div class="main-img-wrapper">
+        <img src="images/TshirtView.jpg" width="100%" class="mainImg" id="main-product-image" alt="">
+      </div>
+      <div class="img-slider" id="product-gallery">
+        <!-- Thumbnails are injected dynamically by ProductPage.js -->
+        <div class="img-first-view active">
+          <img src="images/Men's fashion.jpg" width="100%" class="small-img" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="products-imgDetails">
+      <!-- CHANGE: Breadcrumb-style category (keeps #product-category ID) -->
+      <p class="product-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="shop.html">Shop</a>
+        <span>/</span>
+        <span id="product-category">Home/T-shirt</span>
+      </p>
+
+      <h4 id="product-name">Men's Fashion Tshirt</h4>
+
+      <!-- CHANGE: Star rating display (populated from product data in JS) -->
+      <div class="product-detail-rating" id="product-rating" aria-label="Product rating"></div>
+
+      <!-- CHANGE: Price + stock badge row -->
+      <div class="product-price-stock">
+        <h4 id="product-price">$139.00</h4>
+        <span class="stock-badge in-stock" id="product-stock">In Stock</span>
+      </div>
+
+      <!-- CHANGE: Meta info — category label & SKU (derived from product _id in JS) -->
+      <div class="product-meta">
+        <p><strong>Category:</strong> <span id="product-category-label">—</span></p>
+        <p><strong>SKU:</strong> <span id="product-sku">—</span></p>
+      </div>
+
+      <!-- Size selector — unchanged functionality -->
+      <select name="" id="">
+        <option value="">Select SIze</option>
+        <option value="">XS</option>
+        <option value="">Small</option>
+        <option value="">Medium</option>
+        <option value="">Large</option>
+      </select>
+
+      <!-- CHANGE: Quantity stepper with +/- buttons (keeps #product-quantity ID on input) -->
+      <div class="quantity-wrapper">
+        <label for="product-quantity" class="quantity-label">Quantity</label>
+        <div class="quantity-stepper">
+          <button type="button" class="qty-btn" id="qty-decrease" aria-label="Decrease quantity">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <input type="number" id="product-quantity" value="1" min="1">
+          <button type="button" class="qty-btn" id="qty-increase" aria-label="Increase quantity">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- CHANGE: Action buttons row — fixed malformed cart button, added wishlist -->
+      <div class="product-actions">
+        <button id="product-cart-btn" class="add-cart-btn" data-id="">
+          <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+        </button>
+        <button type="button" class="wishlist-btn product-wishlist-btn" data-id="" aria-label="Add to wishlist">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+      </div>
+
+      <!-- CHANGE: Description section with clearer heading hierarchy -->
+      <div class="product-description-block">
+        <h4>Product Details</h4>
+        <span id="product-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+      </div>
+    </div>
+   </section>
+
+   <!-- CHANGE: Renamed section title to "Related Products" (same #related-products container) -->
+   <section class="product-cards related-products-section">
+  <h3 class="product-title">Related Products</h3>
+  <div class="cards-section" id="related-products"></div>
+</section>
+
+  </main>
+
+  <!-- newsletter -->
+  <section class="signUp-details">
+    <h5>DON'T BE A STRANGER</h5>
+    <p>Subscribe to our newsletter to receive our latest news and updates</p>
+   
+    <div class="SignDetail">
+    <input type="text" id="fname" placeholder="First Name">
+    <input type="text" id="lname" placeholder="Last Name">
+    <input type="text" id="mail" placeholder="Email Address">
+    </div>
+    <button class="signButton">
+      SIGN UP
+    </button>
+  </section>
+
+  <!-- footer -->
+     <footer>
+    <section class="quickLinks">
+    <div class="Contact-section">
+      <h5>contact-section</h5>
+      <ul>
+        <li><span>Address:</span> Sector-M,Ashiyana,Lucknows</li>
+        <li> <span>Phone:</span> +9165932653</li>
+        <li><span>Hours:</span>10:00-18:00, Mon-Sat</li>
+      </ul>
+    </div>
+    <div class="About-section">
+      <h5>About</h5>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="account-section">
+      <h5>My Account</h5>
+      <ul>
+        <li><a href="login.html">Sign in</a></li>
+        <li><a href="cart.html">View Cart</a></li>
+        <li><a href="wishlist.html">My Wishlist</a></li>
+         </ul>
+    </div>
+    <div class="install-section">
+      <h5>Install App</h5>
+      <p>From App Store or Google Play</p>
+      <div><img src="images/play.jpg" alt="">
+        <img src="images/app.jpg" alt="">
+      </div>
+      <p>Secured Payment Gateways</p>
+      <img src="images/pay.png" alt="">
+    </div>
+    <div class="follow-section">
+      <h5>Follow Us</h5>
+      <div class="icon">
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-pinterest"></i>
+      <i class="fa-brands fa-youtube"></i>
+      </div>
+    </div>
+    </section>
+   </footer>
+
+   <script src="script.js"></script>
+<script src="renderProducts.js"></script>
+<script src="ProductPage.js"></script>
+<script src="cart.js"></script>
+  
+</body>
+</html>

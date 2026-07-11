@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  
+</head>
+<body>
+<!--NavBar-->
+ 
+  <nav class="header">
+    <!--logo-->
+    <div class="nav-left">
+     <a href=""><img src="" alt="" class="logo"></a> 
+    </div>
+    <!--menu-->
+    <section class="nav-center">
+      <ul class="menu" >
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+       
+        <li><a href="about.html">About</a></li>
+        <li><a  href="contact.html">Contact</a></li>
+      </ul>
+    </section>
+    <!--searchbar-->
+    <section class="searchbox">
+      
+     <div>
+      
+      <!--action-->
+      <ul class="action">
+        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+        <li class="profile-icon"><a href="login.html"> <i class="fa-regular fa-user"></i></a>
+          
+        </li>
+        <li class="wishlist-icon"><a href="wishlist.html"> <i class="fa-regular fa-heart"></i></a></li>
+        <li class="bag-icon">
+  <a href="cart.html">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span id="cart-count">0</span>
+  </a>
+</li>
+      </ul>
+</div>
+
+    </section>
+  </nav>
+  <!-- contact header -->
+  <section class="contactBanner">
+    <div class="bannerImg">
+      <img src="images/contactBanner.jpg" alt="">
+      <div>
+        <h1>#let's_talk</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum neque nostrum laudantium, quibusdam ex ratione!</p>
+      </div>
+    </div>
+  </section>
+  <section class="cart-details">
+    <table>
+      <thead>
+        <tr>
+        <th>REMOVE</th>
+        <th>IMAGE</th>
+        <th>PRODUCT</th>
+        <th>PRICE</th>
+        <th>QUANTITY</th>
+        <th>SUBTOTAL</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+
+      </tbody>
+           
+    </table>
+  </section>
+  <section class="cart-add">
+    <div class="coupons">
+      <h3>Apply Coupon</h3>
+      <div>
+        <input type="text" id="coupon-input" placeholder="Enter your Coupon">
+        <button id="coupon-button">Apply</button>
+        <p id="coupon-msg"></p>
+      </div>
+
+    </div>
+    <div class="subtotal"> 
+      <h3>Cart Totals</h3>
+      <table>
+        <tr>
+          <td>Cart Subtotal</td>
+          <td id="cart-subtotal"></td>
+
+        </tr>
+        <tr>
+          <td>Shipping</td>
+          <td>Free</td>
+        </tr>
+        <tr>
+          <td><strong>Total</strong></td>
+          <td><strong id="cart-total"></strong></td>
+        </tr>
+      </table>
+       
+      <button id="checkout-btn">Proceed to Checkout</button>
+
+    </div>
+
+  </section>
+ 
+
+  
+  
+  
+ 
+ 
+
+  <!-- footer -->
+   <footer>
+    <section class="quickLinks">
+    <div class="contact-section">
+      <h5>contact-section</h5>
+      <ul>
+        <li><span>Address:</span> Sector-M,Ashiyana,Lucknows</li>
+        <li> <span>Phone:</span> +9165932653</li>
+        <li><span>Hours:</span>10:00-18:00, Mon-Sat</li>
+      </ul>
+
+    </div>
+    <div class="About-section">
+      <h5><a href="">About</a></h5>
+      <ul>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Delivery Information</a></li>
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">Terms&Conditions</a></li>
+        <li><a href="">Contact Us</a></li>
+      </ul>
+
+
+    </div>
+    <div class="account-section">
+      <h5><a href="">My Account</a></h5>
+      <ul>
+        <li><a href="">Sign in</a></li>
+        <li><a href="">View Cart</a></li>
+        <li><a href="">My Wishlist</a></li>
+        <li><a href="">Track My Order</a></li>
+        <li><a href="">Help</a></li>
+      </ul>
+
+    </div>
+    <div class="install-section">
+      <h5>Install App</h5>
+      <p>From App Store or Google Play</p>
+      <div><img src="images/play.jpg" alt="">
+        <img src="images/app.jpg" alt="">
+      </div>
+      <p>Secured Payment Gateways</p>
+      <img src="images/pay.png" alt="">
+
+      
+
+    </div>
+    <div class="follow-section">
+      <h5>Follow Us</h5>
+      <div class="icon">
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-pinterest"></i>
+      <i class="fa-brands fa-youtube"></i>
+      </div>
+
+    </div>
+    </section>
+   </footer>
+
+   <script src="script.js"></script>
+    <script src="cart.js"></script>
+    
+
+  
+</body>
+</html>

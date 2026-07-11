@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css">
+  
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+<section class="checkout-container">
+
+  <!-- Billing Details -->
+  <div class="billing-details">
+
+    <h2>Billing Details</h2>
+
+    <form id="checkout-form">
+  <input type="text"  id="fullName" placeholder="Full Name"     required>
+  <input type="email" id="email"    placeholder="Email Address"  required>
+  <input type="text"  id="phone"    placeholder="Phone Number"   required>
+  <textarea           id="address"  placeholder="Address"        required></textarea>
+
+  <select id="paymentMethod" required>
+    <option value="">Select Payment Method</option>
+    <option value="razorpay">UPI / Card / NetBanking (Razorpay)</option>
+    <option value="cod">Cash on Delivery</option>
+  </select>
+
+  <button type="submit">Place Order</button>
+</form>
+
+  </div>
+  <!-- Order Summary -->
+
+  
+  <div class="order-summary">
+
+    <h2>Your Order</h2>
+
+    <div id="checkout-items"></div>
+
+    <h3>Total: <span id="checkout-total"></span></h3>
+
+  </div>
+
+</section>
+<script src="checkout.js"></script>
+
+</body>
+</html>
